@@ -1,0 +1,21 @@
+Ejemplo en PHP.
+
+<?php
+
+
+$listaparticipantes = [1 => 'Peter', 2 => 'Hans', 3 => 'Sarah'];
+
+$nombres = array_values($listaparticipantes);
+
+
+print($nombres);
+?>
+
+
+Ejemplo en Python.
+
+small_nums = [x for x in range(20) if x < 5]
+        
+
+
+print(small_nums)
