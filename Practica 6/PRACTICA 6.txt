@@ -1,0 +1,45 @@
+EJERCICIO 1
+
+| value_1 value_2|
+(value_1 := UIManager default request: 'enter first value') asNumber.
+(value_2 := UIManager default request: 'enter second value') asNumber.
+nums := Array newFrom: (value_1 to: value_2).
+nums
+
+EJERCICIO 2
+| x |
+x := UIManager default request: 'Ingrese un numero'. 
+(x asInteger rem: 2) = 0
+ifTrue: [ 'Par' ]
+ifFalse: [ 'Impar' ]
+
+EJERCICIO 3
+| year | 
+year := UIManager default request: 'Ingrese un año
+((year asInteger rem: 4) = 0)
+ifTrue: [ ((year asInteger rem:100) = 0)
+	ifTrue: [ 'Año no bisiesto' ]
+	ifFalse: [ 'Año bisiesto' ]
+	]
+ifFalse: [ 'Año no bisiesto' ]
+
+EJERCICIO 4
+
+| i | i := 20. Transcript clear. [ i > 0 ] whileTrue: [ Transcript show: (i asString), ' -> ', ((i rem: 2) = 0 & (i ~= 2) ifTrue: ['No primo'] ifFalse: ['Primo']); cr. i := i - 1. ].
+
+//OTRO CODIGO
+| count max primeList |
+count := 0.
+max := 20.
+primeList := Dictionary new.
+
+primeList at: 1 put: false.
+Transcript clear.
+
+2 to: max do: [ :i | (primeList at: i ifAbsent: true) ifTrue: [ Transcript show: i printString; tab.
+        count := count + 1.
+        i * 2 to: max by: i do: [ :j |
+            primeList at: j put: false
+        ]
+    ]
+].
