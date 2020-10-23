@@ -1,0 +1,30 @@
+Ejercicio 1:
+
+sum:x with:y
+|i contador|
+i:= x.
+contador:= 0.
+[ i <= y  ] whileTrue: [ 
+	contador:= contador + i.
+	i:= i + 1.
+].
+
+^ contador.
+
+  |obj result|
+        obj:= Practica_8 new.
+        result:=obj sum:1 with:3.
+
+
+Ejercicio 2: 
+
+
+collazt: n
+|numero i|
+i:=0.
+(numero > 1) whileTrue: [ numero:=numero even 
+	ifTrue: [ numero // 2 ]
+	ifFalse: [ 3 * numero + 1 ].
+		i:=i+1
+	 ].
+^ numero
