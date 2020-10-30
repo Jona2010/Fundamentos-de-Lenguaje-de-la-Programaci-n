@@ -1,0 +1,15 @@
+Ejercicio 1
+
+x1: x y1: y r1: r x2: a y2: b r2: c
+|temp1 temp2 temp3 temp4|  
+temp1:= x + r.
+temp2:= a + c.
+temp3:= y + r.
+temp4:= b + c.
+
+(temp1 > temp2 and: temp3 > temp4) ifTrue: [ Transcript show: 'Se intersectan' ].
+(temp1 < temp2 and: temp3 < temp4) ifTrue: [ Transcript show: 'No se intersectan' ].
+
+|obj result| 
+obj:= Practica8 new.
+result:= obj x1: 4 y1: 5 r1: 6 x2: 7 y2: 8 r2: 9.
