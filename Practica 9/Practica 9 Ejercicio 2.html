@@ -1,0 +1,31 @@
+<html>
+<body>
+<script>
+
+function divisores(n)
+      
+      {
+
+      var i, x ='';
+      
+         for (i=1; i<=n; i++)
+
+         {
+         if (n%i == 0) //Para saber los divisores
+            x= x+' '+i; // Aqui concateno 's' con el nuevo divisor
+         }
+      
+      //x ='Los divisores del número '+ n + ' son:'+x + '.'; // Aqui mostramos los divisores
+      
+      return (x);
+
+      }
+      
+      var numero;
+      numero=prompt('Introduce un número para saber sus divisores: ',''); //Pedimos el numero         
+      console.log('Los divisores de ' + numero + ' son: '+divisores(numero)); //Mostramos los divisores de n = 10 o cualquier numero
+
+
+</script>
+</body>
+</html>

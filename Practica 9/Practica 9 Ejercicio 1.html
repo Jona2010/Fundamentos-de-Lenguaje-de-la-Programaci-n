@@ -1,0 +1,21 @@
+<html>
+<body>
+<script>
+
+ 
+
+function fibonacci(n) //n puede ser cualquier numero 
+    {
+        let numeros=[0,1];// casos base
+        for (let i = 2; i < n; i++) {
+            numeros[i] = numeros[i - 2] + numeros[i - 1]; //calcula los n numeros fibonacci
+        }
+        return numeros;
+    }
+ 
+    // Mostrando los primeros 10 numeros fibonacci
+    console.log(fibonacci(10)); 
+
+</script>
+</body>
+</html>

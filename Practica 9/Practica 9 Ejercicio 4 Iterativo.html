@@ -1,0 +1,30 @@
+<html>
+<body>
+<script>
+
+function factorialize(num) {
+   if(num == 0)
+   {
+     return 1;
+   }
+
+   else
+   {
+     let factorial = 1;
+
+     for(let i=1;i<=num;i++)
+     {
+      factorial = factorial * i;
+      console.log(i + ":" + factorial);
+     }
+
+     return factorial;
+   }
+}
+
+console.log(factorialize(4));
+
+
+</script>
+</body>
+</html>
