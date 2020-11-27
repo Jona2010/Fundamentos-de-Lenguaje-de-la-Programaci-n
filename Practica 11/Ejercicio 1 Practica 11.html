@@ -1,0 +1,36 @@
+<html>
+<body>
+<script>
+	let tasks = [
+		{'name' : 'Buy milk from the shop ',
+		 'duration' : 20,
+		 'priority' : 1},
+		{'name' : 'Clean the house',
+		 'duration' : 120 ,
+		 'priority' : 3},
+		{'name' : 'Study JS functions ',
+		 'duration' : 180 ,
+		 'priority' : 1}
+	];
+
+	function iterative (h){
+
+		let name = [];
+
+		for (var i = 0;i < h.length; i++) {
+
+			name.push(h[i].name);
+		}
+
+		return name;
+	}
+
+	console.log(iterative(tasks));
+
+	const y = tasks.map(x => x.name);
+	console.log(y);
+	
+
+</script>
+</body> 
+</html>

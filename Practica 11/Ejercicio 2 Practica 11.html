@@ -1,0 +1,43 @@
+<html>
+<body>
+<script>
+<html>
+        <body>
+        <script>
+        	let tasks = [
+        		{'name' : 'Buy milk from the shop ',
+        		 'duration' : 20,
+        		 'priority' : 1},
+        		{'name' : 'Clean the house',
+        		 'duration' : 120 ,
+        		 'priority' : 3},
+        		{'name' : 'Study JS functions ',
+        		 'duration' : 180 ,
+        		 'priority' : 1}
+        	];
+        
+        	function iterative (h){
+        
+        		let priority=[];
+        
+        		for (var i = 0; i < h.length; i++) {
+        
+        			if(h[i].priority == 1)
+                                    priority.push (h[i]);
+        		}
+        
+        		return priority;
+        	}
+        
+        	console.log(iterative(tasks));
+        
+        	const y = tasks.filter(x => x.priority === 1);
+        	console.log(y);
+        	
+        </script>
+        </body> 
+        </html>
+
+</script>
+</body> 
+</html>
