@@ -1,0 +1,41 @@
+<html>
+<body>
+<script>
+	
+	function factorial_recursive (num){ 
+
+		if (num === 0){ 
+			return 1; 
+		}
+
+		return num * factorial_recursive(num - 1); 
+	}
+
+	function factorial_memo(num1){
+
+		var memo = {};
+
+		function factorial(x){
+
+		    if (!memo[x]){
+
+		      memo[x] = x * num1(x - 1);
+
+		    } 
+
+                    else { 
+		    		return memo [x];
+		    }
+
+		    return memo [x]
+		}
+
+		return factorial;
+	}
+
+	console.log("Usando la función sin Memo: ", factorial_recursive(10));
+	console.log("Usando la función con Memo: ", factorial_memo(factorial_recursive)(10));
+
+</script>
+</body>
+</html>
