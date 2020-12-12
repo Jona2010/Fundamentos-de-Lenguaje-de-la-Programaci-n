@@ -1,0 +1,21 @@
+<html>
+<body>
+<script>
+
+	const joinWords = string_1 => string_2 =>{
+		if(string_2 === undefined){
+			return string_1;
+		}
+		else{
+		      return joinWords(string_1 + ' ' + string_2);
+		}
+        };
+
+	result = joinWords ('Hello') ();
+        console .log ( result ); // Hello
+        result = joinWords ('There')('is')('no')('spoon.') ();
+        console .log ( result ); // There is no spoon
+
+</script>
+</body>
+</html>

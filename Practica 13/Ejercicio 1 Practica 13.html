@@ -1,0 +1,55 @@
+<html>
+<body>
+<script>
+//Definición:
+//Se refiera a cuando las funciones se pueden tratar como otro tipo de dato; es decir, asignarles variables y pasarlas como argumentos a otras funciones. 
+	
+        //Primer ejemplo: pasar la función como argumento.
+	function miFuncion() {
+   		return "First Class ";
+	}
+
+	function miFuncionJava(funcion, java) {
+  		console.log(funcion() + java);
+	}
+
+	miFuncionJava(miFuncion, "JavaScript");
+
+	//Pasamos nuestra función miFuncion() como argumento de la función miFuncionJava() 
+        //esto da a entender que tratamos la función como un valor
+
+	//Segundo ejemplo; Devolvemos una función desde otra función.
+                function miFuncion2(){
+   		return function() {
+      	console.log("First Class");
+   		}
+	}
+
+	//Ahora, necesitamos invocar la función miFuncion() y su  función interna devuelta. 
+        //Tenemos dos maneras:
+
+        //Primera manera: usando una variable. 
+
+	const miFuncion3 = function() {
+   		return function() {
+      	console.log("First Class");
+	   	}
+	}
+
+	const miFuncion4 = miFuncion3();
+	miFuncion4();
+
+        //Segunda manera: usando paréntesis doble.
+
+	//Usamos paréntesis doble ()() para que invoquemos la función interna a retornar.
+
+	function miFuncion5() {
+	   return function() {
+	      console.log("First Class de Jonathan");
+	   }
+	}
+	miFuncion5()();
+
+</script>
+</body>
+</html>

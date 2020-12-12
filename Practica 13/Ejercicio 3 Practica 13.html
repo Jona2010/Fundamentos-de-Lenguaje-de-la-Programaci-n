@@ -1,0 +1,18 @@
+<html>
+<body>
+<script>
+
+//Función Normal
+
+	function volumen_cilindro(radio, altura){
+		return (3.14159*(radio*radio)*altura);
+	}
+	console.log("Volumen del Cilindro con la función normal: ", volumen_cilindro(2, 4));
+
+//Función usando Currying
+	const volumen_cilindro_cr = radio => altura => 3.14159*(radio*radio)*altura;
+	console.log("Volumen del Cilindro con currying: ", volumen_cilindro_cr(2)(4));
+
+</script>
+</body>
+</html>

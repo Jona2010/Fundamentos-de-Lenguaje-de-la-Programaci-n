@@ -1,0 +1,29 @@
+<html>
+<body>
+<script>
+	var total = 0;
+
+	var delayInvoc = function (a){
+
+		total = total + a;
+
+		return function add (b){
+
+			if(b != undefined){
+
+				total = total + b;
+				return add;
+			}
+
+			return total ;
+		}
+	}
+
+	delayInvoc (4) (5)
+        console .log ( total ); //9
+        delayInvoc (4) (5) (8)
+        console .log ( total ); // 26
+
+</script>
+</body>
+</html>
